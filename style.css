@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body{
+    font-family: sans-serif;
+}
+
+.portofolio{
+    color: white;
+    background: lightslategray;
+}
+
+nav{
+    min-height: 10vh;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    
+}
+
+.navbar{
+    text-align: center;
+    flex: 1;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    
+}
+
+.navbar a{
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    margin-right: 10px;
+    font-size: 40px;
+    font-weight: bold;
+   
+
+}
+
+.btn{
+    cursor: pointer;
+    color: #cc0052;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    border: 1px solid #003333;
+    background: transparent;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    margin: 40px 8px;
+    padding-right: 5px;
+    
+}
+
+
+
+
+.logo{
+    font-size: 60px;
+    
+
+}
+
+.page{
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+
+}
+
+.hero{
+    overflow: hidden;
+    height: 600px;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+}
+
+.model-right{
+    transform: translate(0%, 10%);
+}
+
+.model-left{
+    transform: translate(0%, -10%);
+}
+
+.hero:hover .model-left{
+    transform: translate(0%, 0%);
+}
+
+
+.hero:hover .model-right{
+    transform: translate(0%, 0%);
+}
+
+.hero img{
+    height: 600px;
+    transition: transform 0.3s ease-out;
+    cursor: pointer;
+}
+
+.details{
+    grid-column: 2/3;
+    align-self: end;
+}
+
+.details h1{
+    font-size: 64px;
+    font-family: sans-serif;
+}
+
+.details h2{
+    font-size: 42px;
+    padding: 20px 0px;
+}
+
+.details p{
+    font-size: 24px;
+    padding: 20px 0px 50px 0px;
+}
+
+.pages{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pages > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pages h3{
+    font-size: 24px;
+    padding: 400px;
+}
+
+.pages svg{
+    cursor: pointer;
+    opacity: 0.5;
+    transform: scale(2);
+}
+
+.pages svg:hover{
+    animation: dot 0.5s ease-in-out infinite alternate;
+}
+
+.pages svg.active{
+    opacity: 1;
+}
+
+@keyframes dot{
+    0%{
+        transform: scale(2);
+    }
+
+    100%{
+        transform: scale(2.5);
+    }
+}
